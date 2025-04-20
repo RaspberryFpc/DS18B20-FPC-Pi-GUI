@@ -2,10 +2,10 @@ object Form1: TForm1
   Left = 199
   Height = 316
   Top = 101
-  Width = 444
+  Width = 465
   Caption = 'DS18B20'
   ClientHeight = 316
-  ClientWidth = 444
+  ClientWidth = 465
   DesignTimePPI = 102
   LCLVersion = '8.6'
   OnClose = FormClose
@@ -16,7 +16,7 @@ object Form1: TForm1
     Top = 16
     Width = 416
     ColCount = 3
-    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goSmoothScroll, goFixedRowNumbering]
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goAutoAddRows, goSmoothScroll, goFixedRowNumbering]
     RowCount = 9
     TabOrder = 0
     ColWidths = (
