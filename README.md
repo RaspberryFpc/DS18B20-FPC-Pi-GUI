@@ -28,7 +28,7 @@ Die vom Hersteller angegebene Genauigkeit des DS18B20 liegt typischerweise bei *
 ## 📷 Screenshots
 
 ### Linearisierung in Calc
-![Screenshot Linearisierung](screenshots/linearisierung.png)
+![Screenshot](https://github.com/Benutzername/Repositoryname/blob/main/linearisierung.png)
 
 ### Beispielanwendung
 ![Screenshot GUI](screenshots/gui-anzeige.png)
