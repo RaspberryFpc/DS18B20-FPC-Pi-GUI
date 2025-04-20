@@ -4,7 +4,7 @@ Ein Free-Pascal-Projekt (Typhon) zur Anzeige von Temperaturen mehrerer DS18B20-S
 
 ## 🌞 Eigenschaften
 
-- Liest bis zu **8 DS18B20-Sensoren** über GPIO (1-Wire)
+- Liest **DS18B20-Sensoren** über GPIO (1-Wire)
 - Darstellung der Temperaturen in einer GUI (kein Konsolenprogramm)
 - Automatische Aktualisierung der Werte im Sekundentakt
 - **Linearisierung** der Sensorwerte zur Reduktion der typischen Nichtlinearität
