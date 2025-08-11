@@ -28,10 +28,10 @@ Die vom Hersteller angegebene Genauigkeit des DS18B20 liegt typischerweise bei *
 ## 📷 Screenshots
 
 ### Linearisierung in Calc
-![Screenshot](https://github.com/RaspberryPiFpcHub/DS18B20-FPC-Pi-GUI/blob/main/DS18B20_temperatur_correction.png)
+![Screenshot](https://github.com/RaspberryFpc/DS18B20-FPC-Pi-GUI/blob/main/DS18B20_temperatur_correction.png)
 
 ### Beispielanwendung
-![Screenshot](https://github.com/RaspberryPiFpcHub/DS18B20-FPC-Pi-GUI/blob/main/Ds18b20-GUI.png)
+![Screenshot](https://github.com/RaspberryFpc/DS18B20-FPC-Pi-GUI/blob/main/Ds18b20-GUI.png)
 
 ## 🔧 Installation
 
@@ -66,4 +66,5 @@ Dieses Projekt steht unter der MIT-Lizenz. Freie Nutzung, Änderung und Weiterga
 ---
 
 > Erstellt von [RaspberryPiFpcHub](https://github.com/RaspberryPiFpcHub)
+
 
