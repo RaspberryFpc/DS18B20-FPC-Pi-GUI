@@ -1,71 +1,61 @@
 # DS18B20-FPC-Pi-GUI
 
-Ein Free-Pascal-Projekt (Typhon) zur Anzeige von Temperaturen mehrerer DS18B20-Sensoren auf einem Raspberry Pi mit grafischer Benutzeroberfläche (GUI).
+A Free Pascal project (Typhon) for displaying temperatures from multiple DS18B20 sensors on a Raspberry Pi with a graphical user interface (GUI).
 
-## 🌞 Eigenschaften
+## 🌞 Features
 
-- Liest mehrere **DS18B20-Sensoren** über GPIO (1-Wire)
-- Darstellung der Temperaturen in einer GUI (kein Konsolenprogramm)
-- Automatische Aktualisierung der Werte im Sekundentakt
-- **Linearisierung** der Sensorwerte zur Reduktion der typischen Nichtlinearität
-- Anzeige der Sensor-IDs im Grid
+* Reads multiple **DS18B20 sensors** via GPIO (1-Wire)
+* Displays temperatures in a GUI (not a console program)
+* Automatic update of values every second
+* **Linearization** of sensor readings to reduce typical nonlinearity
+* Displays sensor IDs in a grid
 
-## ⚖️ Technische Details
+## ⚖️ Technical Details
 
-- Programmiert mit **Free Pascal** unter **Typhon**
-- wenn sie Lazarus verwenden dann muss bei einigen Dateien der Suffix geändert werden 
-- Entwickelt für **Raspberry Pi** unter **Linux** (nutzt `/sys/bus/w1/devices/...`)
-- Keine zusätzlichen Bibliotheken erforderlich (reines FPC-Projekt)
-- Sensorwerte werden ca. alle *(Anzahl Sensoren * 1 Sekunde)* aktualisiert (12-bit Auflösung)
-- GUI startet automatisch
+* Programmed with **Free Pascal** using **Typhon**
+* If using Lazarus, some file suffixes may need to be changed
+* Developed for **Raspberry Pi** on **Linux** (uses `/sys/bus/w1/devices/...`)
+* No additional libraries required (pure FPC project)
+* Sensor values are updated approximately every 1 second (12-bit resolution)
+* GUI starts automatically
 
-## 📈 Linearisierung
+## 📊 Linearization
 
-Die vom Hersteller angegebene Genauigkeit des DS18B20 liegt typischerweise bei **±0,5 °C**. Durch die Verwendung einer polynomialen Korrekturformel, basierend auf den Herstellerdaten, konnte die Abweichung auf **±0,03 °C** reduziert werden.
+The typical accuracy of the DS18B20 is **±0.5 °C**. By applying a polynomial correction formula based on the manufacturer’s data, deviations can be reduced to **±0.03 °C**.
 
-> Hinweis: Ein **konstanter Offset** kann sensorextern weiterhin erforderlich sein (z. B. zur individuellen Kalibrierung).
+> Note: A **constant offset** may still be required externally for individual sensor calibration.
 
 ## 📷 Screenshots
 
-### Linearisierung in Calc
+### Linearization in Calc
+
 ![Screenshot](https://github.com/RaspberryFpc/DS18B20-FPC-Pi-GUI/blob/main/DS18B20_temperatur_correction.png)
 
-### Beispielanwendung
+### Example Application
+
 ![Screenshot](https://github.com/RaspberryFpc/DS18B20-FPC-Pi-GUI/blob/main/Ds18b20-GUI.png)
 
 ## 🔧 Installation
 
-1. Aktiviere 1-Wire unter `/boot/config.txt`:
+1. Enable 1-Wire in `/boot/config.txt`:
+
    ```
    dtoverlay=w1-gpio
    ```
-2. Reboote den Pi.
-3. Kompiliere das Projekt mit **Typhon**.
-4. Starte die Anwendung (GUI startet automatisch).
+2. Reboot the Pi.
+3. Compile the project using **Typhon** or use the binary
+4. Run the application (GUI starts automatically).
 
-Alternativ kannst du auch die grafische Benutzeroberfläche von raspi-config verwenden, um den 1-Wire-Bus zu aktivieren.
-Gehe zu den erweiterten Optionen: Wähle die Option Interfacing Options.
-Aktiviere den 1-Wire-Bus: Wähle 1-Wire und setze ihn auf Enabled.
-Starte den Raspberry Pi neu: Nachdem du den 1-Wire-Bus aktiviert hast, starte den Raspberry Pi neu, um die Änderungen zu übernehmen: 
+Alternatively, you can use the graphical interface of **raspi-config** to enable the 1-Wire bus:
 
-**Lazarus Kompatibilität:**  
-   Bei Verwendung von Lazarus muss der Suffix bei Dateien unter Umständen geändert werden.  
-   Insbesondere in der Datei `form1.pas` sollten die Resourcen von `.frm` nach `.lfm` geändert werden.  
-   Zudem muss auch die Ressourcendatei selbst (z.B. `form1.frm`) umbenannt werden, sodass sie den gleichen Namen wie die `.pas`-Datei trägt (z.B. `form1.lfm`).
+* Go to Advanced Options → Interfacing Options
+* Enable 1-Wire and set it to Enabled
+* Reboot the Raspberry Pi to apply the changes
 
-## 📂 Dateien
+## ✨ License
 
-- `ds18b20.pas`: Low-Level-Kommunikation mit dem Sensor + Linearisierung
-- `Form1.pas: GUI-Anwendung
-- `screenshots/`: Ordner mit Beispielbildern
-
-## ✨ Lizenz
-
-Dieses Projekt steht unter der MIT-Lizenz. Freie Nutzung, Änderung und Weitergabe erlaubt.
-
+This project is licensed under the MIT License.
 ---
 
-> Erstellt von [RaspberryPiFpcHub](https://github.com/RaspberryFpc)
-
-
+> Erstellt von [RaspberryFpc](https://github.com/RaspberryFpc)
 
